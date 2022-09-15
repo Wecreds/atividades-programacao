@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Maioridade
+    //Leia a idade de uma pessoa e informe se ela já chegou à maioridade.Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
+
+    //Entrada
+
+    const Idade = parseInt(prompt("Digite sua idade:"))
+    
+
+    //Processamento
+    let ResultadoNaTela
+    (Idade >= 18) ?  ResultadoNaTela = "Você atingiu a maioridade"
+    : ResultadoNaTela = `Você não atingiu a maioridade, ainda faltam ${18 - Idade} anos.` 
+
+    //Saída
+
+    document.write(ResultadoNaTela)
+    
+</script>

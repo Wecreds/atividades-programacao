@@ -1,0 +1,61 @@
+<script>
+    /*
+    //PROBLEMA: Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+
+    const Tel = prompt("Telefonou para a vítima?(S/N)").toUpperCase();
+    const Lol = prompt("Esteve no local do crime?(S/N)").toUpperCase();
+    const Per = prompt("Mora perto da vítima?(S/N)").toUpperCase();
+    const Dev = prompt("Devia para a vítima?(S/N)").toUpperCase();
+    const Trab = prompt("Já trabalhou com a vítima?(S/N)").toUpperCase();
+
+    //PROCESSAMENTO
+
+    let tot = 0;
+    let men;
+
+    switch (Tel) {
+        case "S":tot += 1;
+    }
+    switch (Lol) {
+        case "S": tot += 1;
+    }
+    switch (Per) {
+        case "S":tot += 1;
+    }
+    switch (Dev) {
+        case "S":tot += 1;   
+    }
+    switch (Trab) {
+        case "S":tot += 1;
+    }
+
+    switch (tot) {
+        case 0: men = "Inocente";
+            break
+        case 1: men = "Inocente";
+            break;
+        case 2: men = "Suspeita";
+            break;
+        case 3: men = "Cúmplice";
+            break;
+        case 4: men = "Cúmplice";
+            break;
+        case 5: men = "Assassino";
+            break;
+    }
+
+
+    //SAÍDA
+
+    document.write(men)
+
+</script>

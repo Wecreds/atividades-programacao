@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema: Meio de transporte mais barato
+    // Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
+    // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
+    // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
+
+    //Entrada
+
+    const Gas = Number(prompt("Digite o preço atual do litro do combustível:"))
+    const GasTrab = Number(prompt("Digite quantos litros você usa para ir para o trabalho diariamente:"))
+    const Pub = Number(prompt("Digite o preço do transporte público que você paga para se deslocar até o trabalho diariamente."))
+
+    //Processamento
+    let Resultado = "Será mais barato ir e voltar de ";
+
+    (Pub < (Gas * GasTrab)) ? Resultado += `transporte público, custando R$${Pub.toFixed(2)}.`
+    : Resultado += `transporte privado(no caso, seu veículo), custando R$${Gas * GasTrab.toFixed(2)}.`
+
+    //Saída
+
+    document.write(Resultado)
+    
+</script>
