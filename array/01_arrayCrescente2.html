@@ -1,0 +1,18 @@
+<script>
+    //Problema: Array em ordem crescente
+    //Peça para um usuário inserir dois números. Crie um array com os números, colocando-os em ordem crescente. Para ordenar, NÃO use o método sort();
+    //Retorne os elementos do array, separando-os por hífen (n1 - n2).
+
+    //ENTRADA
+
+    const arrayTot = [Number(prompt("Informe o primeiro número:")), Number(prompt("Informe o segundo número:"))]
+
+    //PROCESSAMENTO
+
+    let resultado = arrayTot[0] >= arrayTot[1] ? `${arrayTot[1]} - ${arrayTot[0]}` : arrayTot[0] <= arrayTot[1] ? `${arrayTot[0]} - ${arrayTot[1]}` : `Algum valor está errado.`;
+
+    //SAÍDA
+
+    alert(resultado);
+
+</script>

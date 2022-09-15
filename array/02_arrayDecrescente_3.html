@@ -1,0 +1,25 @@
+<script>
+    /*Problema: Array em ordem decrescente
+    Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    Retorne os elementos do array, separando-os por hífen (arrayTot[1]1 - arrayTot[1]2 - arrayTot[1]3).*/
+
+    //ENTRADA
+
+    const arrayTot = [Number(prompt("Informe o primeiro número:")), Number(prompt("Informe o segundo número:")), Number(prompt("Informe o primeiro número:"))];
+
+    //PROCESSAMENTO
+
+    let resultado = 
+      arrayTot[0] >= arrayTot[1] && arrayTot[1] >= arrayTot[2] ? `${arrayTot[0]}, ${arrayTot[1]} e ${arrayTot[2]}.`
+    : arrayTot[0] >= arrayTot[2] && arrayTot[2] >= arrayTot[1] ? `${arrayTot[0]}, ${arrayTot[2]} e ${arrayTot[1]}.`
+    : arrayTot[1] >= arrayTot[2] && arrayTot[2] >= arrayTot[0] ? `${arrayTot[1]}, ${arrayTot[2]} e ${arrayTot[0]}.`
+    : arrayTot[1] >= arrayTot[0] && arrayTot[0] >= arrayTot[2] ? `${arrayTot[1]}, ${arrayTot[0]} e ${arrayTot[2]}.`
+    : arrayTot[2] >= arrayTot[1] && arrayTot[1] >= arrayTot[0] ? `${arrayTot[2]}, ${arrayTot[1]} e ${arrayTot[0]}.`
+    : arrayTot[2] >= arrayTot[0] && arrayTot[0] >= arrayTot[1] ? `${arrayTot[2]}, ${arrayTot[0]} e ${arrayTot[1]}.`
+    : `Algum valor está errado.`;
+
+    //SAÍDA
+
+    alert(resultado);
+
+</script>

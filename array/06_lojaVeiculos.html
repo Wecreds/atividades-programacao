@@ -1,0 +1,38 @@
+<script>
+    //Problema: Loja de veículos
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    // let carrosHatch = ["308", "Focus", "i30"];
+    
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Apresente a lista final de cada tipo de veículo.
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    alert("Digite 3 veículos a serem adicionados")
+
+    const veiculos = [prompt("Informe o primeiro veículo:").toLowerCase(), prompt("Informe o segundo veículo:").toLowerCase(), prompt("Informe o terceiro veículo:").toLowerCase()];
+    const tipos = [prompt("Informe o tipo do primeiro veículo (SUV, Sedan, Hatch):").toLowerCase(), prompt("Informe o tipo do segundo veículo (SUV, Sedan, Hatch):").toLowerCase(), prompt("Informe o tipo do terceiro veículo (SUV, Sedan, Hatch):").toLowerCase()];
+
+    //PROCESSAMENTO
+    
+    let carrosSUVNovo = carrosSUV.slice();
+    let carrosSedanNovo = carrosSedan.slice();
+    let carrosHatchNovo = carrosHatch.slice();
+
+
+      tipos[0] === "suv" ? carrosSUVNovo.push(veiculos[0]) : tipos[0] === "sedan" ? carrosSedanNovo.push(veiculo2) : tipos[0] === "hatch" ? carrosHatchNovo.push(veiculos[0])
+
+    : tipos[1] === "suv" ? carrosSUVNovo.push(veiculos[1]) : tipos[1] === "sedan" ? carrosSedanNovo.push(veiculo2) : tipos[1] === "hatch" ? carrosHatchNovo.push(veiculos[1])
+
+    : tipos[2] === "suv" ? carrosSUVNovo.push(veiculos[2]) : tipos[2] === "sedan" ? carrosSedanNovo.push(veiculo2) : tipos[2] === "hatch" ? carrosHatchNovo.push(veiculos[2])
+
+    : alert(`Algum valor está errado.`);
+
+    document.write(`Listas antigas: <br> <br> SUV: ${carrosSUV} <br> Sedan: ${carrosSedan} <br> Hatch: ${carrosHatch} <br> <br> Listas novas: <br> <br> SUV: ${carrosSUVNovo} <br> Sedan: ${carrosSedanNovo} <br> Hatch: ${carrosHatchNovo}`);
+
+</script>
