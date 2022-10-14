@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidados a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    let candidatos = [];
+
+    for ( let i = 1; i<=3; i++) {
+        candidatos.push(prompt(`Qual o nome do candidato ${i}?`))
+    }
+
+    const quantidadeVotos = parseInt(prompt(`Quantos alunos votantes tem?`));
+    let voto;
+
+    let votosPrimeiro = []
+    let votosSegundo = []
+    let votosTerceiro = []
+    for ( let e = 1; e<=quantidadeVotos; e++) {
+        voto = prompt(`Em qual candidato vc quer votar? (${candidatos[0]} - 1, ${candidatos[1]} - 2, ${candidatos[2]} - 3,)`);
+        if (voto == 1) votosPrimeiro.push(voto);
+        else if (voto == 2) votosSegundo.push(voto);
+        else if (voto == 3) votosTerceiro.push(voto);
+        else alert(`Voto invalido (não existe esse candidato)`);
+    }
+
+    if (votosPrimeiro.length > votosSegundo.length && votosPrimeiro.length > votosTerceiro.length) {
+        document.write(`O candidato ${candidatos[0]} ganhou com ${votosPrimeiro.length} votos <br>`)
+    }
+    else if (votosSegundo.length > votosPrimeiro.length && votosSegundo.length > votosTerceiro.length) {
+        document.write(`O candidato ${candidatos[1]} ganhou com ${votosSegundo.length} votos<br>`);
+    }
+    else if (votosTerceiro.length > votosSegundo.length && votosTerceiro.length > votosPrimeiro.length) {
+        document.write(`O candidato ${candidatos[2]} ganhou com ${votosTerceiro.length} votos <br>`)
+    }
+    
+    else if (votosPrimeiro == votosSegundo) {
+        document.write(`O candidato ${candidatos[0]} empatou com o candidato ${candidatos[1]}<br>`)
+    }
+    else if (votosPrimeiro == votosTerceiro) {
+        document.write(`O candidato ${candidatos[0]} empatou com o candidato ${candidatos[2]}<br>`)
+    }
+    else if (votosTerceiro == votosSegundo) {
+        document.write(`O candidato ${candidatos[1]} empatou com o candidato ${candidatos[2]}<br>`)
+    }
+
+    else {
+        document.write(`Os 3 candidatos empataram <br>`)
+    }
+
+    const porcentagemVotosPrimeiro = (votosPrimeiro.length*100)/quantidadeVotos;
+    const porcentagemVotosSegundo = (votosSegundo.length*100)/quantidadeVotos;
+    const porcentagemVotosTerceiro = (votosTerceiro.length*100)/quantidadeVotos;
+
+    document.write(`Candidato ${candidatos[0]} teve ${porcentagemVotosPrimeiro.toFixed(1)}% dos votos <br>`)
+    document.write(`Candidato ${candidatos[1]} teve ${porcentagemVotosSegundo.toFixed(1)}% dos votos <br>`)
+    document.write(`Candidato ${candidatos[2]} teve ${porcentagemVotosTerceiro.toFixed(1)}% dos votos <br>`)
+</script>
