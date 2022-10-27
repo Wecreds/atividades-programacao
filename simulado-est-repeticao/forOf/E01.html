@@ -8,12 +8,24 @@
     */
 
     //ENTRADA
-
-
+    
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
+    let maiorPreco = 0;
+    let menorPreco = 9999999;
+    let soma = 0;
     //PROCESSAMENTO
 
-
+    for(let i of precoKgArroz){
+        if (i > maiorPreco){
+            maiorPreco = i;
+        }
+        if (i < menorPreco){
+            menorPreco = i;
+        }
+        soma += i;
+    }
     //SAÍDA
 
+    document.write(`O maior preço foi R$${(maiorPreco).toFixed(2)}, o menor foi $${(menorPreco).toFixed(2)}, ea média de preços é R$${(soma/(precoKgArroz.length)).toFixed(2)}`);
 
 </script>
