@@ -15,11 +15,35 @@
     */
 
     //ENTRADA
-
-
+    const produtos = ['tomate', 'batata', 'batataDoce', 'alface', 'cebola', 'cebolinha', 'beterraba'];
+    let precoTot = 0;
+    let item = 0;
     //PROCESSAMENTO
+    for (let i of produtos){
+        if (i === "alface" || i === "cebolinha"){
+             item = parseInt(prompt(`Digite quantas unidades de ${i} foram vendidos: `))
+        } else {
+             item = Number(prompt(`Digite quantos quilos de ${i} foram vendidos: `))
+        }
+        if (i === "tomate"){
+            precoTot += item * 3.90
+        } else if (i === "batata"){
+            precoTot += item * 3.40
+        } else if (i === "batataDoce"){
+            precoTot += item * 4.70
+        } else if (i === "alface"){
+            precoTot += item * 1.50
+        } else if (i === "cebola"){
+            precoTot += item * 2.90
+        } else if (i === "cebolinha"){
+            precoTot += item * 1.40
+        } else if (i === "beterraba"){
+            precoTot += item * 4.10
+        }
+    }
 
-    
     //SAÍDA
+    document.write(`Seu faturamento total foi R$${precoTot}.`)
     
+    /* Tecnicamente daria pra fazer tipo "const precoTot = (tomate * 3.90) + (batata * 3.40) + (batataDoce * 4.70) +..." ? */
 </script>
